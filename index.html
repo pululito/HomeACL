@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Con Letras</title>
+    <link rel="icon" href="assets/images/LgoACL.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/Home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logocute.png" alt="Logo del Sitio">
+        </div>
+        <nav>
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            <i class="fas fa-angle-left" id="left"></i>
+            <ul class="carousel">
+                <li class="card" data-url="https://pululito.github.io/ACL/">
+                    <div class="img">
+                        <img src="assets/images/niño.jpeg" alt="" draggable="false" />
+                    </div>
+                    <span>palabras desordenadas</span>
+                </li>
+
+                <li class="card" data-url="https://pululito.github.io/ACL2/">
+                    <div class="img">
+                        <img src="assets/images/pinguino.jpeg" alt="" draggable="false" />
+                    </div>
+                    <span>Sopa de letras</span>
+                </li>
+
+                <li class="card" data-url="https://pululito.github.io/ACL3/">
+                    <div class="img">
+                        <img src="assets/images/niña.jpeg" alt="" draggable="false" />
+                    </div>
+                    <span>Aprende con letras</span>
+                </li>
+
+                <li class="card" data-url="https://pululito.github.io/ACL4/">
+                    <div class="img">
+                        <img src="assets/images/cora.jpeg" alt="" draggable="false" />
+                    </div>
+                    <span>Completa la oracion</span>
+                </li>
+
+                <li class="card" data-url="https://pululito.github.io/ACL5/">
+                    <div class="img">
+                        <img src="assets/images/snoppy.jpeg" alt="" draggable="false" />
+                    </div>
+                    <span>memorama de palabras</span>
+                </li>
+
+                <li class="card" data-url="https://pululito.github.io/ACL6/">
+                    <div class="img">
+                        <img src="assets/images/phone.jpeg" alt="" draggable="false" />
+                    </div>
+                    <span>Escucha y Acierta</span>
+                </li>
+            </ul>
+            <i class="fas fa-angle-right" id="right"></i>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aprendizaje Con LetrasTodos los derechos reservados.</p>
+    </footer>
+    <script src="js/Home.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Seleccionamos todas las tarjetas
+            let cards = document.querySelectorAll(".carousel .card");
+
+            // Asignamos un enlace específico a cada tarjeta
+            cards.forEach((card) => {
+                card.addEventListener("click", () => {
+                    // Redirigir al enlace especificado en el atributo data-url
+                    let url = card.getAttribute("data-url");
+                    if (url) {
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
